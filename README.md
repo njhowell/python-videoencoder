@@ -1,2 +1,2 @@
 # python-videoencoder
-A Python Celery application to queuing and processing video encoding jobs
+A Python Celery application for queuing and processing video encoding jobs
