@@ -8,7 +8,6 @@ from dirConfig import srcDir, encDir, outDir
 
 f = []
 for (dirpath, dirnames, filenames) in walk (srcDir):
-	print filenames
 	f.extend(filenames)
 
 for file in f:
