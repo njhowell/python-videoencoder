@@ -8,7 +8,7 @@ app.config_from_object('celeryconfig')
 
 @app.task
 def encode(srcFile, dstFolder):
-    outFileName = dstFolder+os.path.splitext(os.path.basename(srcFile))[0]+".mp4"
+    outFileName = dstFolder+os.path.splitext(os.path.basename(srcFile))[0]+".mkv"
     argsStr =  " -i \"%s\" -map 0 -c copy -c:v libx264 -crf 20 -y \"%s\" " % (srcFile, outFileName)
     result = call("ffmpeg" + argsStr, shell=True)
     return result
